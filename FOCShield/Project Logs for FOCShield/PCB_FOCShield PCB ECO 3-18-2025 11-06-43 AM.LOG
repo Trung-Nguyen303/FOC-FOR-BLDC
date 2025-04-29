@@ -1,0 +1,22 @@
+Added Component: Designator=R1(R 2512)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetINA2_1 Pin=INA2-1
+Added Pin To Net: NetName=NetINA2_1 Pin=INA2-8
+Added Pin To Net: NetName=NetINA2_1 Pin=R1-1
+Added Pin To Net: NetName=NetINA2_1 Pin=U-20
+Added Net: Name=NetINA2_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=TB_M1-2
+Added Net: Name=NetR1_2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 10K R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 10K R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 220 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 220 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 220 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R1 R

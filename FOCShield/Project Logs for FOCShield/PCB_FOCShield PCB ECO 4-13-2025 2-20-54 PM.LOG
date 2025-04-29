@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=C7-2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U2 STM32F446RET6
+Added Room: Name=SCH_FOCShield

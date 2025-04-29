@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=NetD2_2 Pin=U1-7
+Removed Pin From Net: NetName=NetINA1_5 Pin=U1-14
+Removed Pin From Net: NetName=NetINA2_5 Pin=U1-20
+Removed Pin From Net: NetName=NetP2_1 Pin=U1-21
+Removed Pin From Net: NetName=NetP2_2 Pin=U1-22
+Removed Pin From Net: NetName=NetP2_3 Pin=U1-23
+Removed Pin From Net: NetName=NetR6_2 Pin=U1-41
+Removed Pin From Net: NetName=NetR8_2 Pin=U1-42
+Removed Pin From Net: NetName=NetR6_2 Pin=U1-43
+Removed Pin From Net: NetName=NetR3_2 Pin=U1-46
+Removed Pin From Net: NetName=NetR2_2 Pin=U1-49
+Added Component: Designator=U?(QFP50P1200X1200X160-64N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "STM32F446RET6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD2_2 Pin=U?-7
+Added Pin To Net: NetName=NetINA1_5 Pin=U?-14
+Added Pin To Net: NetName=NetINA2_5 Pin=U?-20
+Added Pin To Net: NetName=NetP2_1 Pin=U?-21
+Added Pin To Net: NetName=NetP2_2 Pin=U?-22
+Added Pin To Net: NetName=NetP2_3 Pin=U?-23
+Added Pin To Net: NetName=NetR6_2 Pin=U?-41
+Added Pin To Net: NetName=NetR8_2 Pin=U?-42
+Added Pin To Net: NetName=NetR6_2 Pin=U?-43
+Added Pin To Net: NetName=NetR3_2 Pin=U?-46
+Added Pin To Net: NetName=NetR2_2 Pin=U?-49
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? STM32F446RET6

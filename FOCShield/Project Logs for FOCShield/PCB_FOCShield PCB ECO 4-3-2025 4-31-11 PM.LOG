@@ -1,0 +1,42 @@
+Removed Pin From Net: NetName=PhA_CS Pin=U1-1
+Removed Pin From Net: NetName=PWM1 Pin=U1-2
+Removed Pin From Net: NetName=+8 Pin=U1-4
+Removed Pin From Net: NetName=GND Pin=U1-5
+Removed Pin From Net: NetName=GND Pin=U1-6
+Removed Pin From Net: NetName=+8 Pin=U1-7
+Removed Pin From Net: NetName=PWM3 Pin=U1-9
+Removed Pin From Net: NetName=PhC Pin=U1-10
+Removed Pin From Net: NetName=Net1_1 Pin=U1-11
+Removed Pin From Net: NetName=VCP Pin=U1-12
+Removed Pin From Net: NetName=VBOOT Pin=U1-13
+Removed Pin From Net: NetName=GND Pin=U1-14
+Removed Pin From Net: NetName=GND Pin=U1-15
+Removed Pin From Net: NetName=GND Pin=U1-16
+Removed Pin From Net: NetName=GND Pin=U1-17
+Removed Pin From Net: NetName=Net2_2 Pin=U1-18
+Removed Pin From Net: NetName=PWM2 Pin=U1-19
+Removed Pin From Net: NetName=PhB_CS Pin=U1-20
+Change Component Comment : Designator=U1 Old Comment=L6234 New Comment=L6234d
+Change Component Designator: OldDesignator=R2 NewDesignator=R3
+Change Component Designator: OldDesignator=R3 NewDesignator=R2
+Change component parameters: Designator = "U1"; Footprint = "L6234"; UniqueID = "\WUWIKMUN"
+Change component parameters. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=PWM2 Pin=U1-4
+Added Pin To Net: NetName=PhB_CS Pin=U1-5
+Added Pin To Net: NetName=PhA_CS Pin=U1-6
+Added Pin To Net: NetName=PWM1 Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-11
+Added Pin To Net: NetName=+8 Pin=U1-12
+Added Pin To Net: NetName=Net2_2 Pin=U1-13
+Added Pin To Net: NetName=PWM3 Pin=U1-14
+Added Pin To Net: NetName=PhC Pin=U1-15
+Added Pin To Net: NetName=Net1_1 Pin=U1-16
+Added Pin To Net: NetName=VCP Pin=U1-17
+Added Pin To Net: NetName=VBOOT Pin=U1-18
+Added Pin To Net: NetName=GND Pin=U1-19
+Added Pin To Net: NetName=GND Pin=U1-20
+Change Net Name : Old Net Name=Net2_2 New Net Name=EN2
+Added Room: Name=SCH_FOCShield

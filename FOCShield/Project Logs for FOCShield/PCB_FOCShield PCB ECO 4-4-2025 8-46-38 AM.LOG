@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=GND Pin=P1-6
+Change Component Footprint: Designator=P1 Old Footprint=HDR/Header/6/2mm New Footprint=HDR/Header/7/2mm
+Change Component Comment : Designator=P1 Old Comment=Header 6 New Comment=Header 7
+Added Pin To Net: NetName=+3.3v Pin=P1-6
+Added Pin To Net: NetName=GND Pin=P1-7
+Added Room: Name=SCH_FOCShield

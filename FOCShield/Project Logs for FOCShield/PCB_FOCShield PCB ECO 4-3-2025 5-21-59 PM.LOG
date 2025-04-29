@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=PWM2 Pin=U2-41
+Removed Pin From Net: NetName=PWM3 Pin=U2-42
+Added Pin To Net: NetName=PWM3 Pin=U2-41
+Added Pin To Net: NetName=PWM2 Pin=U2-42
+Added Member To Class: ClassName=SCH_FOCShield Member=Component INA2 INA240A2D
+Added Room: Name=SCH_FOCShield

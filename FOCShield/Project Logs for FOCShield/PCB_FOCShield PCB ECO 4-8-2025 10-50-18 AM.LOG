@@ -1,0 +1,3 @@
+Change Component Library : Designator=POWER1 Old Library=connectors.SchLib New Library=Schematic.SchLib
+Change Component Library : Designator=TB_M1 Old Library=connectors.SchLib New Library=Schematic.SchLib
+Added Room: Name=SCH_FOCShield

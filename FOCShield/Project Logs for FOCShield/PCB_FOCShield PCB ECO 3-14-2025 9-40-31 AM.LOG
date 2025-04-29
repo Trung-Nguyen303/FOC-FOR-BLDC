@@ -1,0 +1,2 @@
+Change Net Name : Old Net Name=+8 New Net Name=GND
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? STM32F446RET6

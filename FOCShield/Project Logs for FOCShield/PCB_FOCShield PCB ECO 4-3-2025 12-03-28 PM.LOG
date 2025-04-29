@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=PhA_CS Pin=U-1
+Removed Pin From Net: NetName=PWM1 Pin=U-2
+Removed Pin From Net: NetName=+8 Pin=U-4
+Removed Pin From Net: NetName=GND Pin=U-5
+Removed Pin From Net: NetName=GND Pin=U-6
+Removed Pin From Net: NetName=+8 Pin=U-7
+Removed Pin From Net: NetName=PWM3 Pin=U-9
+Removed Pin From Net: NetName=PhC Pin=U-10
+Removed Pin From Net: NetName=VCP Pin=U-12
+Removed Pin From Net: NetName=VBOOT Pin=U-13
+Removed Pin From Net: NetName=GND Pin=U-14
+Removed Pin From Net: NetName=GND Pin=U-15
+Removed Pin From Net: NetName=GND Pin=U-16
+Removed Pin From Net: NetName=GND Pin=U-17
+Removed Pin From Net: NetName=PWM2 Pin=U-19
+Removed Pin From Net: NetName=PhB_CS Pin=U-20
