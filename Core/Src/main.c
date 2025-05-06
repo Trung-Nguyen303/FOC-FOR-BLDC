@@ -182,8 +182,9 @@ float normalize_angle(float angle_elec_rad) {
 float AS5147U_GetAngleRad() {
     rawCount = AS5147U_ReadAngle();
     float mechanical = rawCount / 16384.0 * 2.0 * PI;
-//    mechanical -= (M_PI+0.18714565);
-    mechanical -= 1.23627206;
+    //mechanical -= (M_PI+0.18714565);
+    mechanical -= 5.3897189304;
+   //// mechanical -= 1.23627206;
     if (mechanical >= 2.0f * PI) mechanical -= 2.0f * PI;
     return mechanical;
 //    return (rawCount / 16384.0 * 2.0 * PI) ;
@@ -268,7 +269,7 @@ void setpwm(){
 
 void update_PID()
 {
-	if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= 1.1f))//(6.0f * (float)M_PI) ))
+	if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))//(6.0f * (float)M_PI) ))
 //if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))
 	{
 //		Kp_speed = 20.0f;
@@ -303,36 +304,36 @@ void update_PID()
 //		Kp = 2;
 //		}
 		Kp_speed = 20.0f;
-				Ki_speed = 0.0f;
-				Kd_speed = 0.0f;
-				Ki_pos = 2.0f;
+				Ki_speed = 2.0f;
+				Kd_speed = 2.0f;
+				Ki_pos = 1.0f;
 				Kp_pos = 100.0f;
-				Kd_pos = 0.0f;
-				if((velocity_ref > -200 && velocity_ref <= 0) || (velocity_ref > 0 && velocity_ref <= 200))
-				{
-				Ki = 4.5;
-				Kp = 1.0;
-				}
-				else if((velocity_ref > -500 && velocity_ref <= -200)||(velocity_ref > 200 && velocity_ref <= 500))
-				{
-				 Ki = 7.0;
-				 Kp = 0.5;
-				 }
-				else if((velocity_ref > -1000 && velocity_ref <= -500)||(velocity_ref > 500 && velocity_ref <= 1000))
-				{
-				 Ki = 9.0;
-				 Kp = 0.5;
-				 }
-				else if((velocity_ref > -1500 && velocity_ref <= -1000)||(velocity_ref > 1000 && velocity_ref <= 1500))
-				{
-				Ki = 13;
-				Kp = 0.5;
-				}
-				else
-				{
-				Ki = 15;
-				Kp = 0.5;
-				}
+				Kd_pos = 15.0f;
+			    if((velocity_ref > -200 && velocity_ref <= 0) || (velocity_ref > 0 && velocity_ref <= 200))
+			    {
+			        Ki = 3.5;
+			        Kp = 1.0;
+			    }
+			    else if((velocity_ref > -500 && velocity_ref <= -200)||(velocity_ref > 200 && velocity_ref <= 500))
+			    {
+			        Ki = 5.0;
+			        Kp = 2.0;
+			    }
+			    else if((velocity_ref > -1000 && velocity_ref <= -500)||(velocity_ref > 500 && velocity_ref <= 1000))
+			    {
+			        Ki = 7.0;
+			        Kp = 2.0;
+			    }
+			    else if((velocity_ref > -1500 && velocity_ref <= -1000)||(velocity_ref > 1000 && velocity_ref <= 1500))
+			    {
+			        Ki = 11;
+			        Kp = 2.0;
+			    }
+			    else
+			    {
+			        Ki = 13;
+			        Kp = 2.0;
+			    }
 	}
 else //if  ( (fabs(error_pos) > (6.0f * (float)M_PI)))
 	{
@@ -540,7 +541,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -618,12 +619,12 @@ int main(void)
 
 	                   if(i == 2000)
 	                   {
-	                	   theta_ref += M_PI*6;
+	                	   theta_ref += M_PI*2;
                         // i = 0;
 	                   }
 	                   else if (i == 4000)
 	                   {
-	                	   theta_ref -= M_PI*3;
+	                	   theta_ref -= M_PI*2;
 	                	   i = 0;
 	                   }
 	     }
@@ -640,18 +641,19 @@ int main(void)
 //	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
 
 
-	    	  	    sprintf((char*)array_iq, "%f\t%f\t%f\t\r\n", theta_ref, theta_now,velocity);
-	    	  	    uart_busy = 1; // Đánh dấu UART đang bận
-	    	  	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
+
+//	    	  	    sprintf((char*)array_iq, "%f\t%f\t%f\t\r\n", theta_ref, theta_now,velocity);// ,velocity
+//	    	  	    uart_busy = 1; // Đánh dấu UART đang bận
+//	    	  	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
 
 	    	  //in xung pwm
 //	    	   	  sprintf((char*)array_iq, "%u\t%u\t%u\t\r\n", PWM_A, PWM_B, PWM_C);
 //			      uart_busy = 1; // Đánh dấu UART đang bận
 //				  HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
 
-//	    	    sprintf((char*)array_iq, "%f\t%f\t\r\n", i_d, i_q);
-//	    	    uart_busy = 1; // Đánh dấu UART đang bận
-//	    	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
+	    	    sprintf((char*)array_iq, "%f\t%f\t\r\n", i_d, i_q);
+	    	    uart_busy = 1; // Đánh dấu UART đang bận
+	    	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
       }
     /* USER CODE END WHILE */
 
