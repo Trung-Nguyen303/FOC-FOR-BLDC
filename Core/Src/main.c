@@ -30,10 +30,10 @@
 #define AS5147U_BIT_RESOLUTION 14
 #define V_LIMIT 8.0
 #define INTEGRAL_LIMIT 1.5
-#define OVERCURRENT_LIMIT_SQ 1.44
+#define OVERCURRENT_LIMIT_SQ 2
 volatile uint32_t adc_value_A0,adc_value_A2, t_prev;
 float ia,ib,ic,i_alpha,i_beta,i_d,i_q,Valpha,Vbeta,Va,Vb,Vc,angle,error_d,error_q,error_d_sum, error_q_sum, speed_error_sum, error_pos_sum;
-float id_ref = 0.0,iq_ref = 0.1 ,theta_ref = 0 ,velocity_ref = 2000;
+float id_ref = 0.0,iq_ref = 0.1 ,theta_ref = 0 ,velocity_ref = 700;
 float Ki = 30, Kp = 8 ,Kp_speed = 20, Ki_speed = 4,Kd_speed = 1, Ki_pos = 35, Kp_pos = 70,Kd_pos = 3;
 float previous_angle,angle_current,angle_previous,velocity,total_angle,error_pos,theta_now,alpha = 0.9;
 float execution_time,dt,speed_dt,angle_elec_rad,angle_offset,error_speed,speed_dt = 0.007;
@@ -47,6 +47,7 @@ uint32_t adc_dma_value;
 uint16_t PWM_A,PWM_B,PWM_C,rawCount,adc_inj_val[2],cnt_val;
 uint8_t array_iq[50];
 float raw_angle,angle_deg;
+float error_pos_sum ;
 
 /* USER CODE END Includes */
 
@@ -79,6 +80,7 @@ TIM_HandleTypeDef htim8;
 
 UART_HandleTypeDef huart4;
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_uart4_tx;
 DMA_HandleTypeDef hdma_usart2_tx;
 
 /* USER CODE BEGIN PV */
@@ -182,9 +184,9 @@ float normalize_angle(float angle_elec_rad) {
 float AS5147U_GetAngleRad() {
     rawCount = AS5147U_ReadAngle();
     float mechanical = rawCount / 16384.0 * 2.0 * PI;
-    //mechanical -= (M_PI+0.18714565);
-    mechanical -= 5.3897189304;
-   //// mechanical -= 1.23627206;
+    //mechanical -= (M_PI+0.18714565);//
+    //mechanical -= 5.3897189304;// dây màu
+   mechanical -= 1.19627206;// dây 3 pha màu trắng
     if (mechanical >= 2.0f * PI) mechanical -= 2.0f * PI;
     return mechanical;
 //    return (rawCount / 16384.0 * 2.0 * PI) ;
@@ -240,8 +242,8 @@ void setpwm(){
 	PWM_C = ((Vc / 8 + 1.0)/2 * PWM_PERIOD)*0.3;
 
 
-	 current_sq = sqrt(ia * ia + ib * ib + ic * ic);
-	 //current_sq = ia * ia + ib * ib + ic * ic;
+	// current_sq = sqrt(ia * ia + ib * ib + ic * ic);
+	 current_sq = ia * ia + ib * ib + ic * ic;
 
 
 	if (current_sq > OVERCURRENT_LIMIT_SQ) {
@@ -270,39 +272,8 @@ void setpwm(){
 void update_PID()
 {
 	if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))//(6.0f * (float)M_PI) ))
-//if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))
 	{
-//		Kp_speed = 20.0f;
-//		Ki_speed = 5.0f;
-//		Kd_speed = 0.0f;
-//		Ki_pos = 10.0f;
-//		Kp_pos = 80.0f;
-//		Kd_pos = 0.0f;
-//		if((velocity_ref > -200 && velocity_ref <= 0) || (velocity_ref > 0 && velocity_ref <= 200))
-//		{
-//		Ki = 2.0;
-//		Kp = 1;
-//		}
-//		else if((velocity_ref > -500 && velocity_ref <= -200)||(velocity_ref > 200 && velocity_ref <= 500))
-//		{
-//		 Ki = 2.0;
-//		 Kp = 2.5;
-//		 }
-//		else if((velocity_ref > -1000 && velocity_ref <= -500)||(velocity_ref > 500 && velocity_ref <= 1000))
-//		{
-//		 Ki = 2.0;
-//		 Kp = 2;
-//		 }
-//		else if((velocity_ref > -1500 && velocity_ref <= -1000)||(velocity_ref > 1000 && velocity_ref <= 1500))
-//		{
-//		Ki = 5;
-//		Kp = 1.5;
-//		}
-//		else
-//		{
-//		Ki = 7;
-//		Kp = 2;
-//		}
+
 		Kp_speed = 20.0f;
 				Ki_speed = 2.0f;
 				Kd_speed = 2.0f;
@@ -372,12 +343,63 @@ else //if  ( (fabs(error_pos) > (6.0f * (float)M_PI)))
 
 }
 
+//void update_PID()
+//{
+//	Kp_speed = 2, Ki_speed = 0.02,Kd_speed = 0;
+//	if((velocity_ref > -100 && velocity_ref <= 0) || (velocity_ref > 0 && velocity_ref <= 100))
+//	    {
+//	        Ki = 0.8;
+//	        Kp = 0.9;
+//	    }
+//	    else if((velocity_ref > -150 && velocity_ref <= -100)||(velocity_ref > 100 && velocity_ref <= 150))
+//	    {
+//	        Ki = 1.0;
+//	        Kp = 1.1;
+//	    }
+//	    else if((velocity_ref > -250 && velocity_ref <= -150)||(velocity_ref > 150 && velocity_ref <= 250))
+//	    {
+//	        Ki = 1.1;
+//	        Kp = 1.1;
+//	    }
+//	    else if((velocity_ref > -350 && velocity_ref <= -250)||(velocity_ref > 250 && velocity_ref <= 350))
+//	    {
+//	        Ki = 1.1;
+//	        Kp = 0.9;
+//	    }
+//	    else if((velocity_ref > -500 && velocity_ref <= -350)||(velocity_ref > 350 && velocity_ref <= 500))
+//	    {
+//	        Ki = 1.3;
+//	        Kp = 1.6;
+//	    }
+//	    else if((velocity_ref > -750 && velocity_ref <= -500)||(velocity_ref > 500 && velocity_ref <= 750))
+//	    {
+//	        Ki = 1.6;
+//	        Kp = 1.7;
+//	    }
+//	    else if((velocity_ref > -1000 && velocity_ref <= -750)||(velocity_ref > 750 && velocity_ref <= 1000))
+//	    {
+//	        Ki = 1.8;
+//	        Kp = 2.1;
+//	    }
+//	    else if((velocity_ref > -1500 && velocity_ref <= -1000)||(velocity_ref > 1000 && velocity_ref <= 1500))
+//	    {
+//	        Ki = 1.9;
+//	        Kp = 2.2;
+//	    }
+//	    else
+//	    {
+//	        Ki = 2.2;
+//	        Kp = 2.8;
+//	    }
+//	}
+
+
 
 void position_loop()
 {
 	update_position_dt();
 
-	    static float error_pos_sum = 0;
+//	    static float error_pos_sum = 0;
 //	    static float position_dt = 0.012;
 
 	    static float raw_angle_prev = 0;
@@ -424,7 +446,7 @@ void Speed_Loop()
     static float error_speed_prev = 0;
     float angle_now = electricalAngle();
     float delta_angle = angle_now - angle_prev;
-
+    //speed_dt= Speed_dt * 7;
     if (delta_angle > PI) delta_angle -= 2 * PI;
     if (delta_angle < -PI) delta_angle += 2 * PI;
 
@@ -438,23 +460,23 @@ void Speed_Loop()
 
     float Iq_unlimited = Kp_speed * error_speed + Ki_speed * speed_error_sum + Kd_speed * derivative;
 
-       float Ts = speed_dt;
-       float Iq_ramp = 5000;
+//       float Ts = speed_dt;
+//       float Iq_ramp = 5000;
+//
+//
+//       static float iq_ref_prev = 0.0f;
+//        Iq_rate = (Iq_unlimited - iq_ref_prev) / Ts;
+//       if (Iq_rate > Iq_ramp)
+//           iq_ref = iq_ref_prev + Iq_ramp * Ts;
+//       else if (Iq_rate < -Iq_ramp)
+//           iq_ref = iq_ref_prev - Iq_ramp * Ts;
+//       else
+//           iq_ref = Iq_unlimited;
+
+       iq_ref = fminf(fmaxf(Iq_unlimited, -1.0f), 1.0f);
 
 
-       static float iq_ref_prev = 0.0f;
-        Iq_rate = (Iq_unlimited - iq_ref_prev) / Ts;
-       if (Iq_rate > Iq_ramp)
-           iq_ref = iq_ref_prev + Iq_ramp * Ts;
-       else if (Iq_rate < -Iq_ramp)
-           iq_ref = iq_ref_prev - Iq_ramp * Ts;
-       else
-           iq_ref = Iq_unlimited;
-
-       iq_ref = fminf(fmaxf(iq_ref, -1.0f), 1.0f);
-
-
-       iq_ref_prev = iq_ref;
+       //iq_ref_prev = iq_ref;
 
     angle_prev = angle_now;
 
@@ -541,7 +563,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-	HAL_Init();
+  HAL_Init();
 
   /* USER CODE BEGIN Init */
 
@@ -578,10 +600,11 @@ int main(void)
   HAL_TIM_Base_Start(&htim2);
   HAL_ADCEx_InjectedStart_IT(&hadc1);
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
   HAL_ADC_Start_DMA(&hadc2, &adc_dma_value, 1);
   angle = AS5147U_GetAngleRad();
   alignRotor();
-  position_loop();
+  //position_loop();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -604,16 +627,16 @@ int main(void)
 	         }
 
 	         // demo vòng tốc độ
-/*
-	                   if(speed_loop_counter >= 1500)
-	                   {
-//	                	   position_loop();
-	                	   velocity_ref+= 200;
-	                	   if(velocity_ref >= 2100)
-	                		   velocity_ref = 0;
-	                       speed_loop_counter = 0;
-	                   }
-*/
+
+//	                   if(position_loop_counter >= 1500)
+//	                   {
+////	                	   position_loop();
+//	                	   velocity_ref+= 200;
+//	                	   if(velocity_ref >= 2100)
+//	                		   velocity_ref = 0;
+//	                	   position_loop_counter = 0;
+//	                   }
+
 
 // demo vòng vị trí
 
@@ -642,18 +665,18 @@ int main(void)
 
 
 
-//	    	  	    sprintf((char*)array_iq, "%f\t%f\t%f\t\r\n", theta_ref, theta_now,velocity);// ,velocity
-//	    	  	    uart_busy = 1; // Đánh dấu UART đang bận
-//	    	  	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
+	    	  	    sprintf((char*)array_iq, "%f\t%f\t%f\t\r\n", theta_ref, theta_now,velocity);// ,velocity
+	    	  	    uart_busy = 1; // Đánh dấu UART đang bận
+	    	  	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
 
 	    	  //in xung pwm
 //	    	   	  sprintf((char*)array_iq, "%u\t%u\t%u\t\r\n", PWM_A, PWM_B, PWM_C);
 //			      uart_busy = 1; // Đánh dấu UART đang bận
 //				  HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
 
-	    	    sprintf((char*)array_iq, "%f\t%f\t\r\n", i_d, i_q);
-	    	    uart_busy = 1; // Đánh dấu UART đang bận
-	    	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
+//	    	    sprintf((char*)array_iq, "%f\t%f\t\r\n", i_d, i_q);
+//	    	    uart_busy = 1; // Đánh dấu UART đang bận
+//	    	    HAL_UART_Transmit_DMA(&huart2, array_iq, strlen((char*)array_iq));
       }
     /* USER CODE END WHILE */
 
@@ -1119,7 +1142,7 @@ static void MX_UART4_Init(void)
 
   /* USER CODE END UART4_Init 1 */
   huart4.Instance = UART4;
-  huart4.Init.BaudRate = 115200;
+  huart4.Init.BaudRate = 19200;
   huart4.Init.WordLength = UART_WORDLENGTH_8B;
   huart4.Init.StopBits = UART_STOPBITS_1;
   huart4.Init.Parity = UART_PARITY_NONE;
@@ -1180,6 +1203,9 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA2_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Stream4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
   /* DMA1_Stream6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
@@ -1207,7 +1233,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3|GPIO_PIN_8, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : PA15 */
   GPIO_InitStruct.Pin = GPIO_PIN_15;
@@ -1215,8 +1241,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB3 PB8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_8;
+  /*Configure GPIO pins : PB3 PB4 PB8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -1254,7 +1280,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 {
-    if (huart->Instance == USART2)
+    if (huart->Instance == USART2)//
     {
         uart_busy = 0;
     }
