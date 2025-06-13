@@ -233,26 +233,41 @@ void park()
 
 void setpwm(){
 
-	Va = fminf(fmaxf(Va, -8.0f), 8.0f);
-	Vb = fminf(fmaxf(Vb, -8.0f), 8.0f);
-	Vc = fminf(fmaxf(Vc, -8.0f), 8.0f);
-
-	PWM_A = ((Va / 8 + 1.0)/2 * PWM_PERIOD)*0.6;
-	PWM_B = ((Vb / 8 + 1.0)/2 * PWM_PERIOD)*0.6;
-	PWM_C = ((Vc / 8 + 1.0)/2 * PWM_PERIOD)*0.6;
+	PWM_A = ((Va / 8 + 1.0)/2 * PWM_PERIOD)*0.3;
+	PWM_B = ((Vb / 8 + 1.0)/2 * PWM_PERIOD)*0.3;
+	PWM_C = ((Vc / 8 + 1.0)/2 * PWM_PERIOD)*0.3;
 
 
-
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, PWM_A);
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, PWM_B);
-	__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, PWM_C);
+	// current_sq = sqrt(ia * ia + ib * ib + ic * ic);
+	 current_sq = ia * ia + ib * ib + ic * ic;
 
 
+	if (current_sq > OVERCURRENT_LIMIT_SQ) {
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 0);
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 0);
+	    //HAL_Delay(5000);
+	} else {
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, PWM_A);
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, PWM_B);
+	    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, PWM_C);
+	}
+	if (adc_dma_voltage < 1.5 || adc_dma_voltage > 1.9) {
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 0);
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, 0);
+		    //HAL_Delay(5000);
+
+		} else {
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, PWM_A);
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, PWM_B);
+		    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_3, PWM_C);
+		}
 }
 
 void update_PID()
 {
-	if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))
+	if ((fabs(error_pos) >= 0.0f) && (fabs(error_pos) <= (6.0f * (float)M_PI)))//(6.0f * (float)M_PI) ))
 	{
 
 		Kp_speed = 20.0f;
