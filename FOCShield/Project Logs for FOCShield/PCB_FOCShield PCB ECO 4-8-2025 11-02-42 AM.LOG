@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=PWM3 Pin=U2-41
+Removed Pin From Net: NetName=PWM1 Pin=U2-43
+Change Component Comment : Designator=C16 Old Comment=1uF New Comment=100nF
+Added Pin To Net: NetName=PWM1 Pin=U2-41
+Added Pin To Net: NetName=PWM3 Pin=U2-43
+Added Room: Name=SCH_FOCShield

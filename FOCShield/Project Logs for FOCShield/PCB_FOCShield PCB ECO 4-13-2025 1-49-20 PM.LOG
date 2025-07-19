@@ -1,0 +1,24 @@
+Added Component: Designator=D4(DO-214AA (SMB) L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D5(DO-214AA (SMB) L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=D4-1
+Added Pin To Net: NetName=PA12 Pin=D4-2
+Added Pin To Net: NetName=GND Pin=D5-1
+Added Pin To Net: NetName=PA11 Pin=D5-2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component D4 Diode ESD/TVS
+Added Member To Class: ClassName=SCH_FOCShield Member=Component D5 Diode ESD/TVS
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U2 STM32F446RET6
+Added Room: Name=SCH_FOCShield

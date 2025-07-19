@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=PhA_CS Pin=U3-1
+Removed Pin From Net: NetName=PWM1 Pin=U3-2
+Removed Pin From Net: NetName=Enable Pin=U3-3
+Removed Pin From Net: NetName=+8 Pin=U3-4
+Removed Pin From Net: NetName=GND Pin=U3-5
+Removed Pin From Net: NetName=GND Pin=U3-6
+Removed Pin From Net: NetName=+8 Pin=U3-7
+Removed Pin From Net: NetName=Enable Pin=U3-8
+Removed Pin From Net: NetName=PWM3 Pin=U3-9
+Removed Pin From Net: NetName=PhC Pin=U3-10
+Removed Pin From Net: NetName=Net1uF_1 Pin=U3-11
+Removed Pin From Net: NetName=VCP Pin=U3-12
+Removed Pin From Net: NetName=VBOOT Pin=U3-13
+Removed Pin From Net: NetName=GND Pin=U3-14
+Removed Pin From Net: NetName=GND Pin=U3-15
+Removed Pin From Net: NetName=GND Pin=U3-16
+Removed Pin From Net: NetName=GND Pin=U3-17
+Removed Pin From Net: NetName=Enable Pin=U3-18
+Removed Pin From Net: NetName=PWM2 Pin=U3-19
+Removed Pin From Net: NetName=PhB_CS Pin=U3-20
+Removed Member From Class: ClassName=SCH_FOCShield Member=U3
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C10 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R1 10K
+Added Room: Name=SCH_FOCShield

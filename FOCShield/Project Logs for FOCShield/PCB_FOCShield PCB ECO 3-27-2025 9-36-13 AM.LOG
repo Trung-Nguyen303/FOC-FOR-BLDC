@@ -1,0 +1,118 @@
+Removed Pin From Net: NetName=NRST Pin=U2-7
+Removed Pin From Net: NetName=A0 Pin=U2-14
+Removed Pin From Net: NetName=A2 Pin=U2-20
+Removed Pin From Net: NetName=SCK Pin=U2-21
+Removed Pin From Net: NetName=MISO Pin=U2-22
+Removed Pin From Net: NetName=MOSI Pin=U2-23
+Removed Pin From Net: NetName=PWM2 Pin=U2-41
+Removed Pin From Net: NetName=PWM3 Pin=U2-42
+Removed Pin From Net: NetName=PWM1 Pin=U2-43
+Removed Pin From Net: NetName=SWDIO Pin=U2-46
+Removed Pin From Net: NetName=SWCLK Pin=U2-49
+Removed Pin From Net: NetName=SWO Pin=U2-55
+Removed Pin From Net: NetName=Enable Pin=U2-56
+Removed Pin From Net: NetName=NetR4_2 Pin=U2-60
+Removed Pin From Net: NetName=CS Pin=U2-61
+Change Component Designator: OldDesignator=1 NewDesignator=?
+Change Component Designator: OldDesignator=2 NewDesignator=?
+Change Component Designator: OldDesignator=3 NewDesignator=?
+Change Component Designator: OldDesignator=4 NewDesignator=?
+Change Component Designator: OldDesignator=5 NewDesignator=?
+Change Component Designator: OldDesignator=6 NewDesignator=?
+Change Component Designator: OldDesignator=BAT1 NewDesignator=BAT?
+Change Component Designator: OldDesignator=C1 NewDesignator=C?
+Change Component Designator: OldDesignator=C2 NewDesignator=C?
+Change Component Designator: OldDesignator=C3 NewDesignator=C?
+Change Component Designator: OldDesignator=C4 NewDesignator=C?
+Change Component Designator: OldDesignator=C5 NewDesignator=C?
+Change Component Designator: OldDesignator=C6 NewDesignator=C?
+Change Component Designator: OldDesignator=C7 NewDesignator=C?
+Change Component Designator: OldDesignator=C8 NewDesignator=C?
+Change Component Designator: OldDesignator=C9 NewDesignator=C?
+Change Component Designator: OldDesignator=C10 NewDesignator=C?
+Change Component Designator: OldDesignator=C11 NewDesignator=C?
+Change Component Designator: OldDesignator=C12 NewDesignator=C?
+Change Component Designator: OldDesignator=CAP1 NewDesignator=CAP?
+Change Component Designator: OldDesignator=D1 NewDesignator=D?
+Change Component Designator: OldDesignator=INA1 NewDesignator=INA?
+Change Component Designator: OldDesignator=INA2 NewDesignator=INA?
+Change Component Designator: OldDesignator=L1 NewDesignator=L?
+Change Component Designator: OldDesignator=P1 NewDesignator=P?
+Change Component Designator: OldDesignator=P2 NewDesignator=P?
+Change Component Designator: OldDesignator=POWER1 NewDesignator=POWER?
+Change Component Designator: OldDesignator=R1 NewDesignator=R?
+Change Component Designator: OldDesignator=R2 NewDesignator=R?
+Change Component Designator: OldDesignator=R3 NewDesignator=R?
+Change Component Designator: OldDesignator=R4 NewDesignator=R?
+Change Component Designator: OldDesignator=R5 NewDesignator=R?
+Change Component Designator: OldDesignator=R6 NewDesignator=R?
+Change Component Designator: OldDesignator=R7 NewDesignator=R?
+Change Component Designator: OldDesignator=R8 NewDesignator=R?
+Change Component Designator: OldDesignator=R9 NewDesignator=R?
+Change Component Designator: OldDesignator=TB_M1 NewDesignator=TB_M?
+Change Component Designator: OldDesignator=U2 NewDesignator=U?
+Change Component Designator: OldDesignator=U3 NewDesignator=U?
+Added Component: Designator=U?(QFP50P1200X1200X160-64N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "STM32F446RET6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U?(QFP50P1200X1200X160-64N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "STM32F446RET6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-2
+Added Pin To Net: NetName=Enable Pin=U?-3
+Added Pin To Net: NetName=PWM2 Pin=U?-4
+Added Pin To Net: NetName=PhB_CS Pin=U?-5
+Added Pin To Net: NetName=PhA_CS Pin=U?-6
+Added Pin To Net: NetName=NRST Pin=U?-7
+Added Pin To Net: NetName=PWM1 Pin=U?-7
+Added Pin To Net: NetName=Enable Pin=U?-8
+Added Pin To Net: NetName=+8 Pin=U?-9
+Added Pin To Net: NetName=GND Pin=U?-10
+Added Pin To Net: NetName=GND Pin=U?-11
+Added Pin To Net: NetName=+8 Pin=U?-12
+Added Pin To Net: NetName=Enable Pin=U?-13
+Added Pin To Net: NetName=A0 Pin=U?-14
+Added Pin To Net: NetName=PWM3 Pin=U?-14
+Added Pin To Net: NetName=PhC Pin=U?-15
+Added Pin To Net: NetName=Net1_1 Pin=U?-16
+Added Pin To Net: NetName=VCP Pin=U?-17
+Added Pin To Net: NetName=VBOOT Pin=U?-18
+Added Pin To Net: NetName=GND Pin=U?-19
+Added Pin To Net: NetName=A2 Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-20
+Added Pin To Net: NetName=SCK Pin=U?-21
+Added Pin To Net: NetName=MISO Pin=U?-22
+Added Pin To Net: NetName=MOSI Pin=U?-23
+Added Pin To Net: NetName=PWM2 Pin=U?-41
+Added Pin To Net: NetName=PWM3 Pin=U?-42
+Added Pin To Net: NetName=PWM1 Pin=U?-43
+Added Pin To Net: NetName=SWDIO Pin=U?-46
+Added Pin To Net: NetName=SWCLK Pin=U?-49
+Added Pin To Net: NetName=SWO Pin=U?-55
+Added Pin To Net: NetName=Enable Pin=U?-56
+Added Pin To Net: NetName=NetR4_2 Pin=U?-60
+Added Pin To Net: NetName=CS Pin=U?-61
+Change Net Name : Old Net Name=Net1_1 New Net Name=Net?_1
+Change Net Name : Old Net Name=Net4_1 New Net Name=Net?_1
+Change Net Name : Old Net Name=Net5_2 New Net Name=Net?_2
+Change Net Name : Old Net Name=NetC7_1 New Net Name=NetC?_1
+Change Net Name : Old Net Name=NetINA1_8 New Net Name=NetINA?_8
+Change Net Name : Old Net Name=NetP2_2 New Net Name=NetP?_2
+Change Net Name : Old Net Name=NetP2_4 New Net Name=NetP?_4
+Change Net Name : Old Net Name=NetP2_6 New Net Name=NetP?_6
+Change Net Name : Old Net Name=NetR4_2 New Net Name=NetR?_2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? STM32F446RET6
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? L6234d
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? STM32F446RET6
+Added Room: Name=SCH_FOCShield

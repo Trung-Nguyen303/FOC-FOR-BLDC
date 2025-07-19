@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=U1 NewDesignator=U2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U2 STM32F446RET6

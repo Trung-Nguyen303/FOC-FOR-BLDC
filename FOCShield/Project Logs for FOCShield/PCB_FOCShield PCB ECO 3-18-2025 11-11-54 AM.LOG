@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=GND Pin=10K-2
+Removed Member From Class: ClassName=SCH_FOCShield Member=10K
+Added Component: Designator=R6(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R7(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R8(R 1/4W/300)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=GND Pin=R7-1
+Added Pin To Net: NetName=GND Pin=R8-1
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR6_2 Pin=U1-43
+Added Pin To Net: NetName=NetR6_2 Pin=U-2
+Added Net: Name=NetR6_2
+Added Pin To Net: NetName=NetR7_2 Pin=R7-2
+Added Pin To Net: NetName=NetR7_2 Pin=U1-41
+Added Pin To Net: NetName=NetR7_2 Pin=U-19
+Added Net: Name=NetR7_2
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=U1-42
+Added Pin To Net: NetName=NetR8_2 Pin=U-9
+Added Net: Name=NetR8_2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R6 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R7 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R8 R

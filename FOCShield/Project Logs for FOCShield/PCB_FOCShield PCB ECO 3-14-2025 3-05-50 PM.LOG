@@ -1,0 +1,98 @@
+Added Component: Designator=1uF(C 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=10nF(C 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=220nF(C 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=CAP1(C SMD ALU (F) DUAL)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOT-23)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=DCOUT (HDR/Terminal/3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=POWER(HDR/Terminal/2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=1uF-2
+Added Pin To Net: NetName=GND Pin=CAP1-2
+Added Pin To Net: NetName=GND Pin=CAP1-2
+Added Pin To Net: NetName=GND Pin=POWER-2
+Added Pin To Net: NetName=+8 Pin=220nF-1
+Added Pin To Net: NetName=+8 Pin=CAP1-1
+Added Pin To Net: NetName=+8 Pin=CAP1-1
+Added Pin To Net: NetName=+8 Pin=D?-1
+Added Pin To Net: NetName=+8 Pin=POWER-1
+Added Pin To Net: NetName=+8 Pin=U-4
+Added Pin To Net: NetName=+8 Pin=U-7
+Added Net: Name=+8
+Added Pin To Net: NetName=Net1uF_1 Pin=1uF-1
+Added Pin To Net: NetName=Net1uF_1 Pin=U-11
+Added Net: Name=Net1uF_1
+Added Pin To Net: NetName=Net10nF_1 Pin=10nF-1
+Added Pin To Net: NetName=Net10nF_1 Pin=D?-3
+Added Net: Name=Net10nF_1
+Added Pin To Net: NetName=Net10nF_2 Pin=10nF-2
+Added Pin To Net: NetName=Net10nF_2 Pin=U-12
+Added Net: Name=Net10nF_2
+Added Pin To Net: NetName=Net220nF_2 Pin=220nF-2
+Added Pin To Net: NetName=Net220nF_2 Pin=D?-2
+Added Pin To Net: NetName=Net220nF_2 Pin=U-13
+Added Net: Name=Net220nF_2
+Added Pin To Net: NetName=NetDCOUT _1 Pin=DCOUT -1
+Added Pin To Net: NetName=NetDCOUT _1 Pin=U-1
+Added Net: Name=NetDCOUT _1
+Added Pin To Net: NetName=NetDCOUT _2 Pin=DCOUT -2
+Added Pin To Net: NetName=NetDCOUT _2 Pin=U-20
+Added Net: Name=NetDCOUT _2
+Added Pin To Net: NetName=NetDCOUT _3 Pin=DCOUT -3
+Added Pin To Net: NetName=NetDCOUT _3 Pin=U-10
+Added Net: Name=NetDCOUT _3
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 1uF C3
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 10nF C2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component 220nF C4
+Added Member To Class: ClassName=SCH_FOCShield Member=Component CAP1 RVT
+Added Member To Class: ClassName=SCH_FOCShield Member=Component D? Diode Dual
+Added Member To Class: ClassName=SCH_FOCShield Member=Component DCOUT  Header 3
+Added Member To Class: ClassName=SCH_FOCShield Member=Component POWER Header 2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? STM32F446RET6

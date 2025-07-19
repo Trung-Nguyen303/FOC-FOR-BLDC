@@ -1,0 +1,4 @@
+Added Component: Designator=U?.1(INA240PD)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U?.1 INA240A2PWR
+Added Room: Name=SCH_FOCShield

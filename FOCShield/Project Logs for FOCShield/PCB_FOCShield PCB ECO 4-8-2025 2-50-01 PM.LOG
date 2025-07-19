@@ -1,0 +1,39 @@
+Removed Pin From Net: NetName=PhB_CS Pin=INA1-1
+Removed Pin From Net: NetName=GND Pin=INA1-2
+Removed Pin From Net: NetName=+3.3v Pin=INA1-3
+Removed Pin From Net: NetName=A2 Pin=INA1-5
+Removed Pin From Net: NetName=+3.3v Pin=INA1-6
+Removed Pin From Net: NetName=GND Pin=INA1-7
+Removed Pin From Net: NetName=PhB Pin=INA1-8
+Removed Pin From Net: NetName=PhA Pin=INA2-1
+Removed Pin From Net: NetName=GND Pin=INA2-2
+Removed Pin From Net: NetName=+3.3v Pin=INA2-3
+Removed Pin From Net: NetName=A0 Pin=INA2-5
+Removed Pin From Net: NetName=+3.3v Pin=INA2-6
+Removed Pin From Net: NetName=GND Pin=INA2-7
+Removed Pin From Net: NetName=PhA_CS Pin=INA2-8
+Removed Member From Class: ClassName=SCH_FOCShield Member=INA1
+Removed Member From Class: ClassName=SCH_FOCShield Member=INA2
+Added Component: Designator=U4(INA240PD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U5(INA240PD)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=U4-1
+Added Pin To Net: NetName=PhB Pin=U4-2
+Added Pin To Net: NetName=PhB_CS Pin=U4-3
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=+3.3v Pin=U4-5
+Added Pin To Net: NetName=+3.3v Pin=U4-6
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=A2 Pin=U4-8
+Added Pin To Net: NetName=GND Pin=U5-1
+Added Pin To Net: NetName=PhA_CS Pin=U5-2
+Added Pin To Net: NetName=PhA Pin=U5-3
+Added Pin To Net: NetName=GND Pin=U5-4
+Added Pin To Net: NetName=+3.3v Pin=U5-5
+Added Pin To Net: NetName=+3.3v Pin=U5-6
+Added Pin To Net: NetName=GND Pin=U5-7
+Added Pin To Net: NetName=A0 Pin=U5-8
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U4 INA240A2PWR
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U5 INA240A2PWR
+Added Room: Name=SCH_FOCShield

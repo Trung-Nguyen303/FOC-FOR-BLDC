@@ -1,0 +1,85 @@
+Removed Pin From Net: NetName=GND Pin=D2-1
+Removed Pin From Net: NetName=PC11 Pin=D2-2
+Removed Pin From Net: NetName=GND Pin=D3-1
+Removed Pin From Net: NetName=PC10 Pin=D3-2
+Removed Pin From Net: NetName=GND Pin=D4-1
+Removed Pin From Net: NetName=PA12 Pin=D4-2
+Removed Pin From Net: NetName=GND Pin=D5-1
+Removed Pin From Net: NetName=PA11 Pin=D5-2
+Removed Pin From Net: NetName=CS Pin=P1-1
+Removed Pin From Net: NetName=SCK Pin=P1-2
+Removed Pin From Net: NetName=MISO Pin=P1-3
+Removed Pin From Net: NetName=MOSI Pin=P1-4
+Removed Member From Class: ClassName=SCH_FOCShield Member=D2
+Removed Member From Class: ClassName=SCH_FOCShield Member=D3
+Removed Member From Class: ClassName=SCH_FOCShield Member=D4
+Removed Member From Class: ClassName=SCH_FOCShield Member=D5
+Added Component: Designator=R21(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R22(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R23(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R24(R 0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U6(SOT-363_L2.0-W1.3-P0.65-LS2.1-BR_SMF05CT)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U7(SOT-363_L2.0-W1.3-P0.65-LS2.1-BR_SMF05CT)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=CS Pin=R21-1
+Added Pin To Net: NetName=SCK Pin=R22-1
+Added Pin To Net: NetName=MISO Pin=R23-1
+Added Pin To Net: NetName=MOSI Pin=R24-1
+Added Pin To Net: NetName=PA12 Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-2
+Added Pin To Net: NetName=PA11 Pin=U6-3
+Added Pin To Net: NetName=PC11 Pin=U6-4
+Added Pin To Net: NetName=PC10 Pin=U6-6
+Added Pin To Net: NetName=CS Pin=U7-1
+Added Pin To Net: NetName=GND Pin=U7-2
+Added Pin To Net: NetName=SCK Pin=U7-3
+Added Pin To Net: NetName=MOSI Pin=U7-4
+Added Pin To Net: NetName=MISO Pin=U7-6
+Added Pin To Net: NetName=NetP1_1 Pin=P1-1
+Added Pin To Net: NetName=NetP1_1 Pin=R21-2
+Added Net: Name=NetP1_1
+Added Pin To Net: NetName=NetP1_2 Pin=P1-2
+Added Pin To Net: NetName=NetP1_2 Pin=R22-2
+Added Net: Name=NetP1_2
+Added Pin To Net: NetName=NetP1_3 Pin=P1-3
+Added Pin To Net: NetName=NetP1_3 Pin=R23-2
+Added Net: Name=NetP1_3
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP1_4 Pin=R24-2
+Added Net: Name=NetP1_4
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R21 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R22 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R23 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R24 R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U6 UPC8172TB-E3-A
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U7 UPC8172TB-E3-A
+Added Room: Name=SCH_FOCShield

@@ -1,0 +1,44 @@
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Added Pin To Net: NetName=NRST Pin=U1-7
+Added Pin To Net: NetName=A0 Pin=U1-14
+Added Pin To Net: NetName=A2 Pin=U1-20
+Added Pin To Net: NetName=SCK Pin=U1-21
+Added Pin To Net: NetName=MISO Pin=U1-22
+Added Pin To Net: NetName=MOSI Pin=U1-23
+Added Pin To Net: NetName=PWM2 Pin=U1-41
+Added Pin To Net: NetName=PWM3 Pin=U1-42
+Added Pin To Net: NetName=PWM1 Pin=U1-43
+Added Pin To Net: NetName=SWDIO Pin=U1-46
+Added Pin To Net: NetName=SWCLK Pin=U1-49
+Added Pin To Net: NetName=SWO Pin=U1-55
+Added Pin To Net: NetName=Enable Pin=U1-56
+Added Pin To Net: NetName=NetR?_2 Pin=U1-60
+Added Pin To Net: NetName=CS Pin=U1-61
+Added Member To Class: ClassName=SCH_FOCShield Member=Component ? C2
+Added Member To Class: ClassName=SCH_FOCShield Member=Component ? C3
+Added Member To Class: ClassName=SCH_FOCShield Member=Component ? RC1
+Added Member To Class: ClassName=SCH_FOCShield Member=Component ? C4
+Added Member To Class: ClassName=SCH_FOCShield Member=Component ? R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 0.1uF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 22uF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 10uF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 100nF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 2.2uF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component C? 1uF
+Added Member To Class: ClassName=SCH_FOCShield Member=Component INA? INA240A2D
+Added Member To Class: ClassName=SCH_FOCShield Member=Component P? Header 6
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 10k
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 10k
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 220
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 220
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 10K
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 10k
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? 220
+Added Member To Class: ClassName=SCH_FOCShield Member=Component R? R
+Added Member To Class: ClassName=SCH_FOCShield Member=Component U? AMS1117
+Added Room: Name=SCH_FOCShield

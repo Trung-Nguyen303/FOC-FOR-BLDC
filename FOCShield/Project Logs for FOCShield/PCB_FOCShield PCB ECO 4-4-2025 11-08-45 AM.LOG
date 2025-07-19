@@ -1,0 +1,45 @@
+Added Component: Designator=H1(SCREW/3.0/6.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK DESC"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "NO-BOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "UNIT PRICE"; Value = "0"; VariantName = "[No Variations]"
+Added Component: Designator=H2(SCREW/3.0/6.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK DESC"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "NO-BOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "UNIT PRICE"; Value = "0"; VariantName = "[No Variations]"
+Added Component: Designator=H3(SCREW/3.0/6.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK DESC"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "NO-BOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "UNIT PRICE"; Value = "0"; VariantName = "[No Variations]"
+Added Component: Designator=H4(SCREW/3.0/6.0)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BRAND"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PACKAGE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PART NO"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK CODE"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "STOCK DESC"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SUPPLIER"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TYPE"; Value = "NO-BOM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "UNIT PRICE"; Value = "0"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=SCH_FOCShield Member=Component H1 Screw Hole
+Added Member To Class: ClassName=SCH_FOCShield Member=Component H2 Screw Hole
+Added Member To Class: ClassName=SCH_FOCShield Member=Component H3 Screw Hole
+Added Member To Class: ClassName=SCH_FOCShield Member=Component H4 Screw Hole
+Added Room: Name=SCH_FOCShield

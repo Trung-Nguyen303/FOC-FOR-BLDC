@@ -1,0 +1,28 @@
+Change Component Designator: OldDesignator=R1 NewDesignator=R2
+Change Component Designator: OldDesignator=R2 NewDesignator=R3
+Change Component Designator: OldDesignator=R3 NewDesignator=R1
+Change Component Designator: OldDesignator=U NewDesignator=U1
+Added Pin To Net: NetName=PhA_CS Pin=U1-1
+Added Pin To Net: NetName=PWM1 Pin=U1-2
+Added Pin To Net: NetName=+8 Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U1-5
+Added Pin To Net: NetName=GND Pin=U1-6
+Added Pin To Net: NetName=+8 Pin=U1-7
+Added Pin To Net: NetName=PWM3 Pin=U1-9
+Added Pin To Net: NetName=PhC Pin=U1-10
+Added Pin To Net: NetName=VCP Pin=U1-12
+Added Pin To Net: NetName=VBOOT Pin=U1-13
+Added Pin To Net: NetName=GND Pin=U1-14
+Added Pin To Net: NetName=GND Pin=U1-15
+Added Pin To Net: NetName=GND Pin=U1-16
+Added Pin To Net: NetName=GND Pin=U1-17
+Added Pin To Net: NetName=PWM2 Pin=U1-19
+Added Pin To Net: NetName=PhB_CS Pin=U1-20
+Added Pin To Net: NetName=Net1_1 Pin=1-1
+Added Pin To Net: NetName=Net1_1 Pin=U1-11
+Added Net: Name=Net1_1
+Added Pin To Net: NetName=Net2_2 Pin=2-2
+Added Pin To Net: NetName=Net2_2 Pin=U1-3
+Added Pin To Net: NetName=Net2_2 Pin=U1-8
+Added Pin To Net: NetName=Net2_2 Pin=U1-18
+Added Net: Name=Net2_2
